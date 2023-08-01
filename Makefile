@@ -152,6 +152,8 @@ install: default
 	$(INSTALL) conf/nginx.conf /usr/local/ztgw/conf/nginx.conf
 	$(INSTALL) conf/mime.types /usr/local/ztgw/conf/mime.types
 	$(INSTALL) etc/config.yaml /usr/local/ztgw/etc/config.yaml
+	$(INSTALL) etc/gw.yaml /usr/local/ztgw/etc/gw.yaml
+	$(INSTALL) etc/ztgw.yaml /usr/local/ztgw/etc/ztgw.yaml
 	$(INSTALL) conf/cert/* /usr/local/ztgw/conf/cert/
 
 	$(INSTALL) -d $(INST_LUADIR)/ztgw
@@ -165,5 +167,9 @@ install: default
 	$(INSTALL) ztgw/cli/*.lua $(INST_LUADIR)/ztgw/cli/
 	$(INSTALL) -d $(INST_LUADIR)/ztgw/utils
 	$(INSTALL) ztgw/utils/*.lua $(INST_LUADIR)/ztgw/utils/
+	$(INSTALL) -d $(INST_LUADIR)/ztgw/router
+	$(INSTALL) ztgw/utils/*.lua $(INST_LUADIR)/ztgw/router/
+	$(INSTALL) -d $(INST_LUADIR)/ztgw/plugins
+	$(INSTALL) ztgw/utils/*.lua $(INST_LUADIR)/ztgw/plugins/
 
 	$(INSTALL) bin/ztgw $(INST_BINDIR)/ztgw
