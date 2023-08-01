@@ -168,8 +168,8 @@ install: default
 	$(INSTALL) -d $(INST_LUADIR)/ztgw/utils
 	$(INSTALL) ztgw/utils/*.lua $(INST_LUADIR)/ztgw/utils/
 	$(INSTALL) -d $(INST_LUADIR)/ztgw/router
-	$(INSTALL) ztgw/utils/*.lua $(INST_LUADIR)/ztgw/router/
+	$(INSTALL) ztgw/router/*.lua $(INST_LUADIR)/ztgw/router/
 	$(INSTALL) -d $(INST_LUADIR)/ztgw/plugins
-	$(INSTALL) ztgw/utils/*.lua $(INST_LUADIR)/ztgw/plugins/
+	$(INSTALL) ztgw/plugins/*.lua $(INST_LUADIR)/ztgw/plugins/
 
 	$(INSTALL) bin/ztgw $(INST_BINDIR)/ztgw
